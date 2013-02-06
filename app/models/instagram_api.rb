@@ -14,7 +14,6 @@ class InstagramApi < BaseApi
 
     endpoint = '/locations/search'
     response = get(endpoint, query: defaults)
-    puts response
 
     if self.successful_call?(response)
       response['data'][0]

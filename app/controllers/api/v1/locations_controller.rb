@@ -1,7 +1,7 @@
 class Api::V1::LocationsController < APIApplicationController
   
   def show
-    foursquare_v2_id = params[:foursquare_v2_id]
+    foursquare_v2_id = params[:id]
 
     if location = Location.find_by_foursquare_v2_id( foursquare_v2_id )
       location
