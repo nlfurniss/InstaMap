@@ -14,6 +14,7 @@
 
 class Location < ActiveRecord::Base
 
+  attr_accessible :name, :foursquare_v2_id, :instagram_id, :latitude, :longitude
   validates_uniqueness_of :foursquare_v2_id, :instagram_id
 
 end

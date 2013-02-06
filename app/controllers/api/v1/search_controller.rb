@@ -15,7 +15,7 @@ class Api::V1::SearchController < APIApplicationController
         foursquare_v2_id: foursquare_v2_id,
         instagram_id: location_data['id'],
         latitude: location_data['latitude'],
-        longitude: location_data['longitude'],
+        longitude: location_data['longitude']
       })
     end
     
