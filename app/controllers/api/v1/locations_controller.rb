@@ -15,9 +15,10 @@ class Api::V1::LocationsController < APIApplicationController
         longitude: location_data['longitude']
       })
     end
-    
-    @recent_media = InstagramApi.recent_media( {instagram_id: location.instagram_id} )
-    respond_with( @recent_media )
+
+    #@recent_media = InstagramApi.recent_media( {instagram_id: location.instagram_id} )
+    #respond_with( @recent_media )
+    respond_with(location)
   end
 
 end
