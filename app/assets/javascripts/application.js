@@ -12,7 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require backbone-min
+//= require handlebars.runtime
 //= require underscore-min
+// require backbone-min
+//= require backbone
+//= require instamap
 //
-//= require_tree .
+//= require_tree ./models
+//= require_tree ./collections
+//= require_tree ../templates
+//= require_tree ./views
+//= require_tree ./routers

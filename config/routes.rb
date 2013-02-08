@@ -1,6 +1,8 @@
 Instamap::Application.routes.draw do
 
-  root :to => 'welcome#index'
+  root to: 'pages#index'
+  match '/locations/:id', to: 'pages#locations'
+  match '/location/:id', to: 'pages#location'
 
   namespace :api do
     namespace :v1 do
