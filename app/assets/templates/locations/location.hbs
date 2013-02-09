@@ -1,5 +1,9 @@
-<p>{{name}}</p>
-<p>{{foursquare_v2_id}}</p>
-<p>{{instagram_id}}
-<p>{{latitude}}</p>
-<p>{{longitude}}</p>
+<h1 class="locationHeadline headline">{{model.name}}</h1>
+<p id="address">@ {{model.location.address}}</p>
+<ul id="picturesContainer">
+{{#each images}}
+    <li class="gridItem" data-large-image="{{this.attributes.images.standard_resolution.url}}">
+        <img src="{{this.attributes.images.thumbnail.url}}" />
+    </li>
+{{/each}}
+</ul>

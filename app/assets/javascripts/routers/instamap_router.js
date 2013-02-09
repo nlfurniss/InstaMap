@@ -8,7 +8,10 @@ Instamap.Routers.InstamapRouter = Backbone.Router.extend({
     },
 
     swap: function(newView) {
-        if ( this.currentView ) { this.currentView.remove(); }
+        if ( this.currentView ) {
+            this.currentView.remove();
+        }
+        this.pictures.reset({ silent: true });
         this.currentView = newView;
         var html = this.currentView.render().el;
         this.$el.empty().append(html);
@@ -34,7 +37,7 @@ Instamap.Routers.InstamapRouter = Backbone.Router.extend({
 
     location: function(locationId) {
         console.log('Location!');
-        var locationView = new Instamap.Views.LocationView({ collection: this.pictures, model: this.locations.where({ foursquare_v2_id: locationId })[0] });
+        var locationView = new Instamap.Views.LocationView({ collection: this.pictures, model: this.locations.where({ id: locationId })[0] });
         this.swap(locationView);
     }
 

@@ -31,7 +31,7 @@ class InstagramApi < BaseApi
     }
     defaults.merge!(options)
 
-    endpoint = '/locations/' + defaults['instagram_id'] + '/media/recent'
+    endpoint = '/locations/' + defaults[:instagram_id] + '/media/recent'
     response = get(endpoint, query: defaults)
 
     if self.successful_call?(response)

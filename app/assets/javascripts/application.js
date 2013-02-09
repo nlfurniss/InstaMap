@@ -16,6 +16,7 @@
 //= require underscore-min
 // require backbone-min
 //= require backbone
+//= require tinybox
 //= require instamap
 //
 //= require_tree ./models

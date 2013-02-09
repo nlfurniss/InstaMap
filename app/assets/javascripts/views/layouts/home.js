@@ -1,6 +1,7 @@
 Instamap.Views.HomeView = Backbone.View.extend({
 
     id: 'homeContainer',
+    className: 'container',
     template: HandlebarsTemplates['layouts/home'],
 
     events: {

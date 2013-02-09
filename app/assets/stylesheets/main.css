@@ -1,14 +1,136 @@
-/* Primary CSS 
+/* Main layout's styleing*/
+
+html {
+  background-color: black;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 
 body {
   padding: 0px;
   margin: 0px;
-  color: white;
-  background-color: black;
+}
+
+ul {
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+.headline {
+  color: #5A5A5A;
+  text-align: center;
+  margin: 0 0 35px;
+  font-weight: 200;
+}
+
+.container {
+  background-color: #F7F7F7;
+  border: 3px solid black;
+  border-radius: 5px 5px 5px 5px;
+  margin: 10px 400px 0;
+  opacity: 0.95;
+  padding: 10px;
+  width: 635px;
 }
 
 #mainContainer {
+  margin-top: 50px;
+  background-image: url('http://i.imgur.com/jKu1Moi.jpg');
+  background-repeat: no-repeat;
   width: 100%;
-  height: 1000px;
+  height: 700px;
 }
-*/
+
+#contentContainer {
+  padding: 20px 0 0;
+}
+
+/* Home view's styling */
+
+#homeHeadline {
+  margin: 0 0 35px;
+}
+
+#homeContainer {
+  margin: 100px 400px 0;
+}
+
+#searchContainer {
+  margin: 0px auto;
+  width: 500px;
+}
+
+#searchForm {
+  margin: 0 0 10px;
+}
+
+#locationSearch {
+  width: 500px;
+  height: 30px;
+  font-size: 17px;
+}
+
+/* Location Results styling*/
+#locationsList {
+}
+
+.location {
+  /*margin: 0 0 10px;
+  padding: 2px 0 0;*/
+  font-size: 19px;
+  text-align: center;
+  padding: 7px 0;
+  border-bottom: 1px solid gray;
+}
+
+.location:hover {
+  background-color: #346F9A;
+  color: white;
+  cursor: pointer;
+}
+
+.smallAddress {
+  font-size: 15px;
+  position: relative;
+  bottom: 1px;
+}
+
+/* Solo location styling*/
+#locationContainer {
+  width: 685px;
+  background-color: #969D9E;
+}
+.locationHeadline {
+  color: white;
+}
+#address {
+  font-size: 19px;
+  text-align: center;
+}
+#picturesContainer {
+  margin: 20px 0 0;
+}
+
+#largePicture {
+  float: left;
+  margin: 10px 5px 0;
+  padding: 0;
+  width: 612px;
+}
+
+.gridItem {
+  border: 1px solid gray;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  margin: 0 5px 10px 0;
+  padding: 5px;
+  transition: box-shadow 230ms ease 0s;
+}
+
+.gridItem:hover {
+  box-shadow: 0 0 35px rgba(255, 255, 255, 1);
+  cursor: pointer;
+}

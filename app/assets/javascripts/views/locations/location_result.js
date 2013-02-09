@@ -3,7 +3,7 @@ Instamap.Views.LocationsResult = Backbone.View.extend({
     tagName: 'li',
     className: 'location',
     attributes: function() {
-      return { 'data-location-id': this.model.get('foursquare_v2_id') };
+      return { 'data-location-id': this.model.get('id') };
     },
     template: HandlebarsTemplates['locations/location_result'],
 

@@ -1,6 +1,7 @@
 Instamap.Views.LocationsView = Backbone.View.extend({
 
     id: 'locationsContainer',
+    className: 'container',
     template: HandlebarsTemplates['locations/locations'],
 
     events: {
