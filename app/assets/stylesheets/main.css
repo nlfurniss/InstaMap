@@ -18,6 +18,15 @@ li {
   list-style: none;
 }
 
+header {
+  height: 50px;
+}
+
+footer {
+  height: 50px;
+  padding: 15px 0 0 5px;
+}
+
 .headline {
   color: #5A5A5A;
   text-align: center;
@@ -32,15 +41,14 @@ li {
   margin: 10px 400px 0;
   opacity: 0.95;
   padding: 10px;
-  width: 635px;
+  width: 705px;
 }
 
-#mainContainer {
-  margin-top: 50px;
+#backgroundContainer {
   background-image: url('http://i.imgur.com/jKu1Moi.jpg');
   background-repeat: no-repeat;
   width: 100%;
-  height: 700px;
+  height: 650px;
 }
 
 #contentContainer {
@@ -99,8 +107,9 @@ li {
 
 /* Solo location styling*/
 #locationContainer {
-  width: 685px;
+  width: 705px;
   background-color: #969D9E;
+  margin: 10px 350px 0;
 }
 .locationHeadline {
   color: white;
@@ -109,8 +118,15 @@ li {
   font-size: 19px;
   text-align: center;
 }
+
+#mapContainer {
+  height: 175px;
+}
+
 #picturesContainer {
   margin: 20px 0 0;
+  height: 300px;
+  overflow-x: auto;
 }
 
 #largePicture {
@@ -128,6 +144,18 @@ li {
   margin: 0 5px 10px 0;
   padding: 5px;
   transition: box-shadow 230ms ease 0s;
+  background-color: #F5F5F5;
+}
+
+.highlight {
+  border: 1px solid gray;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  margin: 0 5px 10px 0;
+  padding: 5px;
+  transition: box-shadow 230ms ease 0s;
+  background-color: #F5F5F5;
 }
 
 .gridItem:hover {

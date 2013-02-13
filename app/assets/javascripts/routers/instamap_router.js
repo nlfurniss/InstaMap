@@ -14,7 +14,9 @@ Instamap.Routers.InstamapRouter = Backbone.Router.extend({
         this.pictures.reset({ silent: true });
         this.currentView = newView;
         var html = this.currentView.render().el;
+        this.$el.hide();
         this.$el.empty().append(html);
+        this.$el.slideDown("slow");
     },
 
     routes: {
@@ -37,7 +39,10 @@ Instamap.Routers.InstamapRouter = Backbone.Router.extend({
 
     location: function(locationId) {
         console.log('Location!');
-        var locationView = new Instamap.Views.LocationView({ collection: this.pictures, model: this.locations.where({ id: locationId })[0] });
+        var locationView = new Instamap.Views.LocationView({
+            collection: this.pictures,
+            model: this.locations.where({ id: locationId })[0]
+        });
         this.swap(locationView);
     }
 

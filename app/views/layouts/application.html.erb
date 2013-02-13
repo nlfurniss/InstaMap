@@ -4,12 +4,13 @@
   <title>Instamap</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <link rel="shortcut icon" href="/favicon.ico"/>
   <%= csrf_meta_tags %>
 </head>
 <body>
     <noscript>Please enable JavaScript to view this site</noscript>
 
 <%= yield %>
-
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA7AAQ0tzLTOvD_MTmU9SAl8r72XO8oWO4&sensor=false"></script>
 </body>
 </html>

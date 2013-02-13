@@ -21,14 +21,12 @@ Instamap.Views.LocationsView = Backbone.View.extend({
 
     buildLocations: function() {
         if ( this.collection.length > 0 ) {
-            //console.log('lots of locations');
             this.collection.each( function(location) {
                 var result = new Instamap.Views.LocationsResult({ model: location });
                 this.$('#locationsList').append(result.render().el);
             });
         } else {
-            //console.log('no results');
-            //this.$('#locationsContainer').append('<p>no results</p>');
+            this.$('#locationsContainer').append('<p>No Results :-(</p>');
         }
     },
 

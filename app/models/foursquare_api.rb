@@ -22,6 +22,7 @@ class FoursquareApi < BaseApi
     if self.successful_call?(response)
       response['response']['venues']
     else
+      puts response
       response = {error: 'Something went wrong :-('}
     end
   end

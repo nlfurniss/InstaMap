@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130206013357) do
+ActiveRecord::Schema.define(:version => 20130210102406) do
 
   create_table "locations", :force => true do |t|
     t.string   "name"
@@ -25,5 +25,15 @@ ActiveRecord::Schema.define(:version => 20130206013357) do
 
   add_index "locations", ["foursquare_v2_id"], :name => "index_locations_on_foursquare_v2_id"
   add_index "locations", ["instagram_id"], :name => "index_locations_on_instagram_id"
+
+  create_table "users", :force => true do |t|
+    t.integer  "uid"
+    t.string   "username"
+    t.string   "full_name"
+    t.string   "profile_picture"
+    t.string   "access_token"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
 end

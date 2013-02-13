@@ -5,3 +5,4 @@ development:
   instagram:
     client_id: "c7fa52f39645438d96c23f06c384e3c8"
     client_secret: "9b849fcb8e6348ceb8b71c3818d20f62"
+    redirect_uri: "http://localhost:3000/instagram/redirect"

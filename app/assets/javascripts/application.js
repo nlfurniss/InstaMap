@@ -18,6 +18,7 @@
 //= require backbone
 //= require tinybox
 //= require instamap
+//= require utils
 //
 //= require_tree ./models
 //= require_tree ./collections

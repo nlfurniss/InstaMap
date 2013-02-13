@@ -1,5 +1,6 @@
-<h1 class="locationHeadline headline">{{model.name}}</h1>
+<h1 class="locationHeadline headline">[ {{model.name}} ]</h1>
 <p id="address">@ {{model.location.address}}</p>
+<div id="mapContainer"></div>
 <ul id="picturesContainer">
 {{#each images}}
     <li class="gridItem" data-large-image="{{this.attributes.images.standard_resolution.url}}">
