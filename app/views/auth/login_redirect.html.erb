@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+    <h1 id="headline">Thanks for Signing Up!</h1>
+<script>
+    var id = "<%= @user.id %>",
+        username = "<%= @user.username %>",
+        full_name = "<%= @user.full_name %>";
+        uid = "<%= @user.uid %>";
+        access_token = "<%= @user.access_token %>"
+    try {
+      if ( id ) {
+        window.opener.Instamap.user.set({ id: id, username: username, full_name: full_name, uid: uid, access_token: access_token });
+      }
+      window.close();
+    }
+    catch(error) {
+      document.getElementById('headline').innerHTML = "Sorry, there was an error. Please try again later." + error
+    }
+</script>
+</body>
+</html>
