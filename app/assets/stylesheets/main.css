@@ -18,6 +18,10 @@ li {
   list-style: none;
 }
 
+a {
+   outline: 0;
+}
+
 header {
   height: 50px;
 }
@@ -25,6 +29,12 @@ header {
 footer {
   height: 50px;
   padding: 15px 0 0 5px;
+}
+
+#loggedInMessage {
+  color: white;
+  font-weight: 200;
+  padding: 0 0 0 5px;
 }
 
 .headline {
@@ -177,7 +187,7 @@ footer {
 
 #soloPictureContainer:hover #likeIcon {
   right: 40px;
-  opacity: .8;
+  opacity: 1;
 }
 
 #soloPictureContainer #likeIcon {
@@ -185,7 +195,7 @@ footer {
   position: absolute;
   top: 35px;
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 #soloPictureContainer #likeIcon:hover {

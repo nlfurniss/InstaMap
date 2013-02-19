@@ -19,12 +19,13 @@ Instamap.Models.User = Backbone.Model.extend({
         console.log('Stored user id in localStorage');
     },
 
-    addLike: function() {
-        
-    },
-
-    removeLike: function() {
-        
+    like: function(picture_id) {
+        $.ajax({
+            url: this.urlRoot + '/' + this.get('id') + '/like',
+            type: 'GET',
+            dataType: 'json',
+            data: {picture_id: picture_id}
+        })
     }
 
 });

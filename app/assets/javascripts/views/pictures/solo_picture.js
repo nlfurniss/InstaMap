@@ -17,7 +17,7 @@ Instamap.Views.SoloPicture = Backbone.View.extend({
 
     likePicture: function(event) {
         event.preventDefault();
-        this.model.like();
+        Instamap.user.like(this.model.get('id'));
     }
 
 });

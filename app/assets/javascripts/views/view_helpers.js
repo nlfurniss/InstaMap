@@ -17,5 +17,9 @@ Instamap.ViewHelpers = {
 
     loggedInUser: function() {
         return ( Instamap.user.get('access_token') ) ? true: false;
+    },
+
+    displayUsername: function() {
+        return Instamap.user.get('username');
     }
 }

@@ -12,7 +12,11 @@ Instamap::Application.routes.draw do
     namespace :v1 do
       resources :search, only: [:index]
       resources :locations, only: [:show]
-      resources :users, only: [:show]
+      resources :users, only: [:show] do
+        member do
+          get 'like' => :like
+        end
+      end
     end
   end
 
