@@ -27,7 +27,7 @@ Instamap.Views.LocationView = Backbone.View.extend({
         //     }
         // };
         //this.$el.html( this.template({ images: this.collection.first( numToDisplay(this.collection.length) ), model: this.model.attributes }) );
-        this.$el.html( this.template({ model: this.model.attributes }) );
+        this.$el.html( this.template(this.model.attributes) );
         this.$('#picturesContainer').hide();
         this.renderPictures();
         this.loadGoogleMap();
@@ -36,7 +36,7 @@ Instamap.Views.LocationView = Backbone.View.extend({
 
     renderPictures: function() {
         this.collection.each( function(model) {
-            var picture = new Instamap.Views.PictureItem({model: model}).render();
+            var picture = new Instamap.Views.PictureGridItem({model: model}).render();
             this.$('#picturesContainer').append( picture.el );
         });
         this.$('#picturesContainer').show();

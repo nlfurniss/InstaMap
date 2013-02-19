@@ -9,7 +9,6 @@ window.Instamap = {
         console.log('Starting InstaMap...');
 
         this.ViewHelpers.initialize();
-        this.settings.likesEndpoint = 'https://api.instagram.com/v1/media/{media-id}/likes';
 
         if ( localStorage.userId ) {
             this.user = new Instamap.Models.User({ id: localStorage.userId });

@@ -162,3 +162,32 @@ footer {
   box-shadow: 0 0 35px rgba(255, 255, 255, 1);
   cursor: pointer;
 }
+
+#soloPictureContainer span {
+  background: rgba(0,0,0,0.65);
+  bottom: 36px;
+  color: white;
+  left: 0px;
+  position: relative;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-right: 1px solid white;
+  border-top: 1px solid white;
+}
+
+#soloPictureContainer:hover #likeIcon {
+  right: 40px;
+  opacity: .8;
+}
+
+#soloPictureContainer #likeIcon {
+  right: -15px;
+  position: absolute;
+  top: 35px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+#soloPictureContainer #likeIcon:hover {
+  opacity: 1;
+}
