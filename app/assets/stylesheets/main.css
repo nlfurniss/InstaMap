@@ -31,6 +31,15 @@ footer {
   padding: 15px 0 0 5px;
 }
 
+#backArrow {
+  opacity: 0.5;
+  padding: 0 0 0 5px;
+}
+
+#backArrow:hover {
+  opacity: 1;
+}
+
 #loggedInMessage {
   color: white;
   font-weight: 200;
@@ -155,17 +164,8 @@ footer {
   padding: 5px;
   transition: box-shadow 230ms ease 0s;
   background-color: #F5F5F5;
-}
-
-.highlight {
-  border: 1px solid gray;
-  border-radius: 5px 5px 5px 5px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-  display: inline-block;
-  margin: 0 5px 10px 0;
-  padding: 5px;
-  transition: box-shadow 230ms ease 0s;
-  background-color: #F5F5F5;
+  height: 150px;
+  width: 150px;
 }
 
 .gridItem:hover {
@@ -187,7 +187,7 @@ footer {
 
 #soloPictureContainer:hover #likeIcon {
   right: 40px;
-  opacity: 1;
+  opacity: 0.65;
 }
 
 #soloPictureContainer #likeIcon {

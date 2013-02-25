@@ -1,10 +1,10 @@
 Instamap.Views.Layout = Backbone.View.extend({
 
     id: 'mainContainer',
-    template: HandlebarsTemplates['layouts/main'],
+    template: HandlebarsTemplates['layouts/main_layout'],
 
     events: {
-        'click #homeLink'     : 'goHome',
+        'click #backArrow'    : 'goBack',
         'click #signInButton' : 'openLoginModal'
     },
 
@@ -18,9 +18,8 @@ Instamap.Views.Layout = Backbone.View.extend({
         return this;
     },
 
-    goHome: function(event) {
-        event.preventDefault();
-        Instamap.router.navigate('/', {trigger: true});
+    goBack: function() {
+         history.back();
     },
 
     openLoginModal: function(event) {
