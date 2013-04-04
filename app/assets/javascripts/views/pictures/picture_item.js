@@ -1,7 +1,7 @@
 Instamap.Views.PictureGridItem = Backbone.View.extend({
 
     tagName: 'li',
-    className: 'gridItem',
+    className: 'gridItem clickable',
     template: HandlebarsTemplates['pictures/picture_grid_item'],
 
     events: {
@@ -9,7 +9,6 @@ Instamap.Views.PictureGridItem = Backbone.View.extend({
     },
 
     initialize: function(){
-        
     },
 
     render: function() {

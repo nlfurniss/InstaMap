@@ -2,6 +2,7 @@ class Api::V1::LocationsController < APIApplicationController
   
   def show
     foursquare_v2_id = params[:id]
+    next_page = params[:next_page] || ''
 
     if location = Location.find_by_foursquare_v2_id( foursquare_v2_id )
 
@@ -16,7 +17,7 @@ class Api::V1::LocationsController < APIApplicationController
       })
     end
 
-    @recent_media = InstagramApi.recent_media( {instagram_id: location.instagram_id} )
+    @recent_media = InstagramApi.recent_media({ instagram_id: location.instagram_id, max_id: next_page })
     respond_with( @recent_media )
   end
 

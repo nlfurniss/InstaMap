@@ -1,7 +1,7 @@
 Instamap.Views.LocationsResult = Backbone.View.extend({
 
     tagName: 'li',
-    className: 'location',
+    className: 'location clickable',
     attributes: function() {
       return { 'data-location-id': this.model.get('id') };
     },

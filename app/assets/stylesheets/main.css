@@ -74,6 +74,10 @@ footer {
   padding: 20px 0 0;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 /* Home view's styling */
 
 #homeHeadline {
@@ -115,7 +119,6 @@ footer {
 .location:hover {
   background-color: #346F9A;
   color: white;
-  cursor: pointer;
 }
 
 .smallAddress {
@@ -166,23 +169,26 @@ footer {
   background-color: #F5F5F5;
   height: 150px;
   width: 150px;
+  vertical-align: top;
 }
 
 .gridItem:hover {
   box-shadow: 0 0 35px rgba(255, 255, 255, 1);
-  cursor: pointer;
 }
 
 #soloPictureContainer span {
   background: rgba(0,0,0,0.65);
-  bottom: 36px;
+  bottom: 48px;
   color: white;
-  left: 0px;
   position: relative;
   padding: 10px 20px;
   font-size: 18px;
   border-right: 1px solid white;
   border-top: 1px solid white;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 #soloPictureContainer:hover #likeIcon {

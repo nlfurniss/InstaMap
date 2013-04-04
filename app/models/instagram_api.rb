@@ -35,7 +35,7 @@ class InstagramApi < BaseApi
     response = get(endpoint, query: defaults)
 
     if self.successful_call?(response)
-      response['data']
+      response
     else
       response = {error: 'Something went wrong :-('}
     end
