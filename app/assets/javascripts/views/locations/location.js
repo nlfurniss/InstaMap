@@ -46,9 +46,9 @@ Instamap.Views.LocationView = Backbone.View.extend({
     loadMorePictures: function() {
         var elem = $('#picturesContainer'),
             position = elem.scrollTop(),
-            bottom = elem.prop('scrollTopMax');
+            bottom = elem.prop('scrollHeight') - elem.height();
         if ( position === bottom && this.collection.where({id: this.collection.nextPagination})[0] ) {
-                this.collection.retrieve({ locationId: this.locationId, nextPage: true });
+            this.collection.retrieve({ locationId: this.locationId, nextPage: true });
         } else {
             elem.off('scroll', this.loadMorePictures);
         }
