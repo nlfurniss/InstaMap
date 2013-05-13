@@ -186,17 +186,15 @@ footer {
 
 #soloPictureContainer span {
   background: rgba(0,0,0,0.65);
-  bottom: 48px;
+  bottom: 30px;
   color: white;
-  position: relative;
+  position: absolute;
   padding: 10px 20px;
   font-size: 18px;
   border-right: 1px solid white;
   border-top: 1px solid white;
   display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  width: 572px;
 }
 
 #soloPictureContainer:hover #likeIcon {
