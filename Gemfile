@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
-gem 'sqlite3'
 gem 'httparty'
 gem 'annotate'
 gem 'thin'
@@ -18,6 +17,14 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :production, :staging do
+  gem "pg"
+end
+
+group :development do
+  gem "sqlite3"
 end
 
 gem 'jquery-rails'
