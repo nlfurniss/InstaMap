@@ -1,5 +1,7 @@
 <h1 class="locationHeadline headline">{{name}}</h1>
-<p id="address">@ {{location.address}}</p>
+{{#if location.address}}
+    <p id="address">@ {{location.address}}</p>
+{{/if}}
 <div id="mapContainer"></div>
 <ul id="picturesContainer">
 </ul>

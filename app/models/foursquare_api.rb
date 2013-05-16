@@ -27,4 +27,22 @@ class FoursquareApi < BaseApi
     end
   end
 
+  def self.location_lookup(options={})
+    defaults = {
+      client_id: SETTINGS['foursquare']['client_id'],
+      client_secret: SETTINGS['foursquare']['client_secret'],
+    }
+    defaults.merge!(options)
+
+    endpoint = '/venues/' + defaults[:venue_id]
+    response = get(endpoint, query: defaults)
+
+    if self.successful_call?(response)
+      response['response']['venue']
+    else
+      puts response
+      response = {error: 'Something went wrong :-('}
+    end
+  end
+
 end

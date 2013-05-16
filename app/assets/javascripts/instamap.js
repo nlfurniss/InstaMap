@@ -9,6 +9,13 @@ window.Instamap = {
         console.log('Starting InstaMap...');
 
         this.ViewHelpers.initialize();
+        this.locationData = window.locationData || {};
+        this.isMobile = function() {
+            return matchMedia("(max-width: 540px)").matches;
+        }
+        this.isTablet = function() {
+            return matchMedia("(max-width: 960px) and (min-width: 540px)").matches;
+        }
 
         if ( localStorage.userId ) {
             this.user = new Instamap.Models.User({ id: localStorage.userId });

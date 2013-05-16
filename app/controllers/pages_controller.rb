@@ -8,6 +8,7 @@ class PagesController <  ApplicationController
   end
 
   def location
+    @location_data = FoursquareApi.location_lookup({ venue_id: params[:id] })
   end
 
 end

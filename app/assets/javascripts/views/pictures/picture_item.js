@@ -5,7 +5,7 @@ Instamap.Views.PictureGridItem = Backbone.View.extend({
     template: HandlebarsTemplates['pictures/picture_grid_item'],
 
     events: {
-        'click' : 'showBigPicture'
+        'click a' : 'showBigPicture'
     },
 
     initialize: function(){
@@ -16,9 +16,12 @@ Instamap.Views.PictureGridItem = Backbone.View.extend({
         return this;
     },
 
-    showBigPicture: function() {
-        var soloPicture = new Instamap.Views.SoloPicture({model: this.model});
-        TINY.box.show({html: soloPicture.render().el,width:612,height:612});
+    showBigPicture: function(event) {
+        if ( !Instamap.isMobile() ) {
+            event.preventDefault();
+            var soloPicture = new Instamap.Views.SoloPicture({model: this.model});
+            TINY.box.show({html: soloPicture.render().el,width:612,height:612});
+        }
     }
 
 });

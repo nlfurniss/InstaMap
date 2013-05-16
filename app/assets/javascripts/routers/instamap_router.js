@@ -4,6 +4,7 @@ Instamap.Routers.InstamapRouter = Backbone.Router.extend({
         this.$el = $('#contentContainer');
         this.locations = options.parent.locations;
         this.pictures = options.parent.pictures;
+        this.locationData = options.parent.locationData;
         this.currentView = null;
     },
 
@@ -21,8 +22,8 @@ Instamap.Routers.InstamapRouter = Backbone.Router.extend({
 
     routes: {
         ""                      : "home",
-        "locations"             : "locations",
-        "locations/:locationId" : "location",
+        "locations/:query"      : "locations",
+        "location/:locationId"  : "location",
     },
 
     home: function() {
@@ -31,17 +32,24 @@ Instamap.Routers.InstamapRouter = Backbone.Router.extend({
         this.swap(homeView);
     },
 
-    locations: function() {
+    locations: function(query) {
         console.log('Locations!');
-        var locationsView = new Instamap.Views.LocationsView({ collection: this.locations });
+        var locationsView = new Instamap.Views.LocationsView({ collection: this.locations, query: query });
         this.swap(locationsView);
     },
 
     location: function(locationId) {
         console.log('Location!');
+        var model;
+        if ( this.locations.where({ id: locationId })[0] ) {
+            model = this.locations.where({ id: locationId })[0];
+        } else {
+            model = new Instamap.Models.Location(this.locationData);
+        }
+
         var locationView = new Instamap.Views.LocationView({
             collection: this.pictures,
-            model: this.locations.where({ id: locationId })[0]
+            model: model
         });
         this.swap(locationView);
     }

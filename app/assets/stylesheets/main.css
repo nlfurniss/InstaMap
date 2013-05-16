@@ -115,7 +115,7 @@ footer {
   padding: 2px 0 0;*/
   font-size: 19px;
   text-align: center;
-  padding: 7px 0;
+  padding: 10px 0;
   border-bottom: 1px solid gray;
 }
 
@@ -171,7 +171,7 @@ footer {
   border-radius: 5px 5px 5px 5px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   display: inline-block;
-  margin: 0 5px 10px 0;
+  margin: 0 5px 10px 3px;
   padding: 5px;
   transition: box-shadow 230ms ease 0s;
   background-color: #F5F5F5;

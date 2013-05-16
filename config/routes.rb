@@ -3,6 +3,7 @@ Instamap::Application.routes.draw do
   root to: 'pages#index'
   match '/locations', to: 'pages#locations'
   match '/locations/:id', to: 'pages#location'
+  match 'location/:id', to: 'pages#location'
   
   # Routes to Instagram Authorization
   match '/instagram/authorize', to: 'auth#authorize'
@@ -10,7 +11,7 @@ Instamap::Application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :search, only: [:index]
+      resources :search, only: [:index, :show ]
       resources :locations, only: [:show]
       resources :users, only: [:show] do
         member do

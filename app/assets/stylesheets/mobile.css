@@ -1,0 +1,65 @@
+@media only screen and (max-width: 540px) {
+
+  #backgroundContainer {
+    background-image: url('/assets/ggbridge_mobile.jpg');
+  }
+
+  .container {
+    width: 95%;
+    padding: 10px 0;
+  }
+
+  #homeContainer {
+    height: 200px;
+    padding: 10px 0 10px;
+    margin-top: 10px;
+  }
+  
+  #homeHeadline {
+    margin: 0 0 12px;
+  }
+  
+  #searchContainer {
+    width: 95%;
+  }
+  
+  #locationSearch {
+    height: 55px;
+    font-size: 19px;
+    width: 97%;
+  }
+  
+  #locationSearch:focus {
+    font-size: 25px;
+  }
+  
+  #signInButton img {
+    height: 50px;
+    width: 300px;
+  }
+
+  #locationContainer {
+    width: 95%;
+    padding: 10px 0;
+  }
+
+  #picturesContainer {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .gridItem {
+    width: 130px;
+    height: 130px;
+    transition: none;
+  }
+
+  .gridItem:hover {
+    box-shadow: none;
+  }
+
+  .gridItem img {
+    width: 130px;
+    height: 130px;
+  }
+
+}

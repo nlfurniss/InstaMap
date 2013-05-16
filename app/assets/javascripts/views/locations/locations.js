@@ -10,11 +10,11 @@ Instamap.Views.LocationsView = Backbone.View.extend({
 
     initialize: function() {
         this.listenTo( this.collection, 'reset', this.render );
-        this.collection.query({ searchQuery: this.collection.searchQuery });
+        this.collection.query({ searchQuery: this.options.query });
     },
 
     render: function() {
-        this.$el.html( this.template({ query: this.collection.searchQuery }) );
+        this.$el.html( this.template({ query: decodeURIComponent(this.options.query) }) );
         this.buildLocations();
         return this;
     },
@@ -33,7 +33,7 @@ Instamap.Views.LocationsView = Backbone.View.extend({
     openLocation: function(event) {
         event.preventDefault();
         locationId = $(event.currentTarget).data('location-id');
-        Instamap.router.navigate( '/locations/' + locationId, {trigger: true} );
+        Instamap.router.navigate( '/location/' + locationId, {trigger: true} );
     }
 
 });

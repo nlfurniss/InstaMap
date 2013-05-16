@@ -2,15 +2,19 @@
 <html>
 <head>
   <title>Instamap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
   <link rel="shortcut icon" href="/favicon.ico"/>
+  <link rel="apple-touch-icon" href="/assets/homescreen_icon.jpg" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <%= csrf_meta_tags %>
 </head>
 <body>
     <noscript>Please enable JavaScript to view this site</noscript>
 
 <%= yield %>
+    <%= javascript_include_tag "application" %>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA7AAQ0tzLTOvD_MTmU9SAl8r72XO8oWO4&sensor=false"></script>
 </body>
 </html>

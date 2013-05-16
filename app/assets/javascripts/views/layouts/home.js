@@ -19,8 +19,7 @@ Instamap.Views.HomeView = Backbone.View.extend({
     search: function(event) {
         event.preventDefault();
         var query = this.$('input').val();
-        this.collection.searchQuery = query;
-        Instamap.router.navigate( '/locations', {trigger: true} );
+        Instamap.router.navigate( '/locations/' + query, {trigger: true} );
     }
 
 });

@@ -11,5 +11,6 @@
  *= require_self
  *= require main
  *= require style
+ *= require mobile
  *= require_tree .
  */
