@@ -1,13 +1,10 @@
-/* Main layout's styleing*/
-
-html {
-  background-color: black;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-}
+/* Main layout's styling*/
 
 body {
   padding: 0px;
   margin: 0px;
+  background-color: black;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 ul {
@@ -26,21 +23,21 @@ header {
   height: 50px;
 }
 
+header #backArrow {
+  opacity: 0.5;
+  padding: 0 0 0 5px;
+}
+
+header #backArrow:hover {
+  opacity: 1;
+}
+
 footer {
   height: 50px;
   padding: 15px 0 0 5px;
 }
 
-#backArrow {
-  opacity: 0.5;
-  padding: 0 0 0 5px;
-}
-
-#backArrow:hover {
-  opacity: 1;
-}
-
-#loggedInMessage {
+footer #loggedInMessage {
   color: white;
   font-weight: 200;
   padding: 0 0 0 5px;
@@ -78,14 +75,15 @@ footer {
   cursor: pointer;
 }
 
-/* Home view's styling */
-
-#homeHeadline {
-  margin: 0 0 35px;
-}
+/********************
+Home view's styling */
 
 #homeContainer {
   margin: 100px auto;
+}
+
+#homeContainer h1 {
+  margin: 0 0 35px;
 }
 
 #searchContainer {
@@ -93,11 +91,11 @@ footer {
   width: 500px;
 }
 
-#searchForm {
+#searchContainer form {
   margin: 0 0 10px;
 }
 
-#locationSearch {
+#searchContainer input {
   width: 500px;
   height: 30px;
   font-size: 17px;
@@ -106,13 +104,10 @@ footer {
   border: 1px solid gray;
 }
 
-/* Location Results styling*/
-#locationsList {
-}
+/*************************
+Location Results styling */
 
 .location {
-  /*margin: 0 0 10px;
-  padding: 2px 0 0;*/
   font-size: 19px;
   text-align: center;
   padding: 10px 0;
@@ -124,36 +119,37 @@ footer {
   color: white;
 }
 
-.smallAddress {
+.location span {
   font-size: 15px;
   position: relative;
   bottom: 1px;
 }
 
-/* Solo location styling*/
+/***********************
+Solo location styling*/
+
 #locationContainer {
   width: 705px;
   background-color: rgba(0, 0, 0, 0.65);
-  /*margin: 10px 350px 0;*/
   border: 1px solid white;
 }
-.locationHeadline {
+#locationContainer h1 {
   color: white;
   font-size: 50px;
   margin: 0 0 20px;
 }
-#address {
+#locationContainer p {
   font-size: 25px;
   color: white;
   text-align: center;
   margin: 0 0 20px;
 }
 
-#mapContainer {
+#locationContainer #mapContainer {
   height: 175px;
 }
 
-#picturesContainer {
+#locationContainer #picturesContainer {
   margin: 20px 0 0;
   height: 300px;
   overflow-x: auto;

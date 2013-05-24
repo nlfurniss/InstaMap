@@ -2,12 +2,10 @@ Instamap.Views.LocationsResult = Backbone.View.extend({
 
     tagName: 'li',
     className: 'location clickable',
-    attributes: function() {
-      return { 'data-location-id': this.model.get('id') };
-    },
     template: HandlebarsTemplates['locations/location_result'],
 
     events: {
+        'click' : 'openLocation'
     },
 
     initialize: function() {
@@ -16,6 +14,11 @@ Instamap.Views.LocationsResult = Backbone.View.extend({
     render: function() {
         this.$el.html( this.template(this.model.attributes) );
         return this;
+    },
+
+    openLocation: function() {
+        var locationId = this.model.get('id');
+        Instamap.router.navigate( '/location/' + locationId, {trigger: true} );
     }
 
 });

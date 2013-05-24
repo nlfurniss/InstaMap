@@ -5,7 +5,6 @@ Instamap.Views.LocationsView = Backbone.View.extend({
     template: HandlebarsTemplates['locations/locations'],
 
     events: {
-        'click .location' : 'openLocation'
     },
 
     initialize: function() {
@@ -28,12 +27,6 @@ Instamap.Views.LocationsView = Backbone.View.extend({
         } else {
             this.$('#locationsContainer').append('<p>No Results :-(</p>');
         }
-    },
-
-    openLocation: function(event) {
-        event.preventDefault();
-        locationId = $(event.currentTarget).data('location-id');
-        Instamap.router.navigate( '/location/' + locationId, {trigger: true} );
     }
 
 });
