@@ -20,7 +20,10 @@ Instamap.Views.PictureGridItem = Backbone.View.extend({
         if ( !Instamap.isMobile() ) {
             event.preventDefault();
             var soloPicture = new Instamap.Views.SoloPicture({model: this.model});
-            TINY.box.show({html: soloPicture.render().el,width:612,height:612});
+            TINY.box.show({html: soloPicture.render().el,
+                width: this.model.get('images').standard_resolution.width,
+                height: this.model.get('images').standard_resolution.height
+            });
         }
     }
 

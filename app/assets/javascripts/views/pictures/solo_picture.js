@@ -1,5 +1,6 @@
 Instamap.Views.SoloPicture = Backbone.View.extend({
 
+    id: 'soloPictureContainer',
     template: HandlebarsTemplates['pictures/solo_picture'],
 
     events: {
@@ -7,7 +8,6 @@ Instamap.Views.SoloPicture = Backbone.View.extend({
     },
 
     initialize: function() {
-
     },
 
     render: function() {

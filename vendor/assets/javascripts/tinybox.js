@@ -4,7 +4,7 @@ TINY.box=function(){
 	var j,m,b,g,v,p=0;
 	return{
 		show:function(o){
-			v={opacity:70,close:1,animate:1,fixed:1,mask:1,maskid:'',boxid:'',topsplit:2,url:0,post:0,height:0,width:0,html:0,iframe:0};
+			v={opacity:80,close:1,animate:1,fixed:1,mask:1,maskid:'',boxid:'',topsplit:2,url:0,post:0,height:0,width:0,html:0,iframe:0};
 			for(s in o){v[s]=o[s]}
 			if(!p){
 				j=document.createElement('div'); j.className='tbox';

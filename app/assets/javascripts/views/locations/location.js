@@ -23,8 +23,8 @@ Instamap.Views.LocationView = Backbone.View.extend({
 
     renderPictures: function() {
         this.collection.each( function(model) {
-            var picture = new Instamap.Views.PictureGridItem({model: model}).render();
-            this.$('#picturesContainer').append( picture.el );
+            var picture = new Instamap.Views.PictureGridItem({model: model}).render().el;
+            this.$('#picturesContainer').append( picture );
         });
         this.$('#picturesContainer').show();
     },
