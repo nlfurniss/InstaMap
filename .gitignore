@@ -21,3 +21,6 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+# Don't include the settings, keep the keys secret
+/config/settings.yml
