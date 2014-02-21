@@ -10,6 +10,7 @@ window.Instamap = {
 
         this.ViewHelpers.initialize();
         this.locationData = window.locationData || {};
+
         this.isMobile = function() {
             return matchMedia("(max-width: 540px)").matches;
         }
@@ -33,4 +34,4 @@ window.Instamap = {
     }
 };
 
-$(function(){window.Instamap.initialize()});
+$(function(){window.Instamap.initialize();});

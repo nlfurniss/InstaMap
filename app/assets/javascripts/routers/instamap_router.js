@@ -33,7 +33,7 @@ Instamap.Routers.InstamapRouter = Backbone.Router.extend({
     },
 
     locations: function(query) {
-        console.log('Locations!');
+        console.log('Location Results!');
         var locationsView = new Instamap.Views.LocationsView({ collection: this.locations, query: query });
         this.swap(locationsView);
     },

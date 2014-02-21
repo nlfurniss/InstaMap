@@ -2,6 +2,8 @@ Instamap.Collections.Pictures = Backbone.Collection.extend({
 
     baseUrl: '/api/v1/locations',
     model: Instamap.Models.Picture,
+    nextPagination: null,
+
     url: function() {
         return this.baseUrl + '/' + this.locationId;
     },
