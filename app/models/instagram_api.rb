@@ -18,7 +18,7 @@ class InstagramApi < BaseApi
     if self.successful_call?(response)
       response['data'][0]
     else
-      response = {error: 'Something went wrong :-('}
+      response = {error: 'Something went wrong with Instagram id lookup'}
     end
   end
 
@@ -37,7 +37,7 @@ class InstagramApi < BaseApi
     if self.successful_call?(response)
       response
     else
-      response = {error: 'Something went wrong :-('}
+      response = {error: 'Something went wrong with Instagram recent media'}
     end
   end
 

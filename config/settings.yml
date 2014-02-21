@@ -1,0 +1,16 @@
+development:
+  foursquare:
+    client_id: 
+    client_secret: 
+  instagram:
+    client_id: 
+    client_secret: 
+    redirect_uri: "http://localhost:3000/instagram/redirect"
+production:
+  foursquare:
+    client_id: 
+    client_secret: 
+  instagram:
+    client_id: 
+    client_secret: 
+    redirect_uri: "http://instamapper.herokuapp.com/instagram/redirect"

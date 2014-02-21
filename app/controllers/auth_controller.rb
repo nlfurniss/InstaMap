@@ -2,7 +2,7 @@ class AuthController < ApplicationController
   layout false
 
   def authorize
-    redirect_to "https://instagram.com/oauth/authorize/?client_id=#{SETTINGS['instagram']['client_id']}&redirect_uri=http://localhost:3000/instagram/redirect&response_type=code&scope=basic+likes"
+    redirect_to "https://instagram.com/oauth/authorize/?client_id=#{SETTINGS['instagram']['client_id']}&redirect_uri=#{SETTINGS['instagram']['redirect_uri']}&response_type=code&scope=basic+likes"
   end
 
   def redirect

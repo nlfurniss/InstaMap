@@ -14,6 +14,7 @@ tmp
 /log/*.log
 /log
 /tmp
+run.sh
 
 /db/*.sqlite3
 
@@ -23,4 +24,4 @@ _yardoc
 doc/
 
 # Don't include the settings, keep the keys secret
-/config/settings.yml
+/config/settings.yml.original

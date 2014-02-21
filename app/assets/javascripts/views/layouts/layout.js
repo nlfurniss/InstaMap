@@ -9,7 +9,7 @@ Instamap.Views.Layout = Backbone.View.extend({
     },
 
     initialize: function() {
-        this.listenTo( Instamap.user, 'user:loaded', this.reRenderFooter );
+        //this.listenTo( Instamap.user, 'user:loaded', this.reRenderFooter );
     },
 
     render: function() {

@@ -3,10 +3,13 @@ class FoursquareApi < BaseApi
 
   base_uri 'https://api.foursquare.com/v2'
 
+  def self.today
+    Date.today.strftime('%Y%m%d')
+  end
+
   # Returns an array of locations given a search query
   #
   def self.location_search(options={})
-    today = Date.today.strftime('%Y%m%d')
     defaults = {
       v: today,
       client_id: SETTINGS['foursquare']['client_id'],
@@ -23,12 +26,13 @@ class FoursquareApi < BaseApi
       response['response']['venues']
     else
       puts response
-      response = {error: 'Something went wrong :-('}
+      response = {error: 'Something went wrong with Foursquare location search'}
     end
   end
 
   def self.location_lookup(options={})
     defaults = {
+      v: today,
       client_id: SETTINGS['foursquare']['client_id'],
       client_secret: SETTINGS['foursquare']['client_secret'],
     }
@@ -41,7 +45,7 @@ class FoursquareApi < BaseApi
       response['response']['venue']
     else
       puts response
-      response = {error: 'Something went wrong :-('}
+      response = {error: 'Something went wrong with Foursquare location lookup'}
     end
   end
 
